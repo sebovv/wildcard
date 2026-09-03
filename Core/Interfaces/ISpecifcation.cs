@@ -1,5 +1,4 @@
 using System.Linq.Expressions;
-using System.Runtime.CompilerServices;
 
 namespace Core.Interfaces;
 
@@ -9,6 +8,10 @@ public interface ISpecification<T>
     public Expression<Func<T, object>>? OrderBy { get; }
     public Expression<Func<T, object>>? OrderByDescending { get; }
     public bool IsDistinct { get; }
+    public bool IsPagingEnabled { get; }
+    public int Skip { get; }
+    public int Take { get; }
+    IQueryable<T> ApplyCriteria(IQueryable<T> query);
 }
 
 public interface ISpecification<T, TResult> : ISpecification<T>

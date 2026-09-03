@@ -9,7 +9,9 @@ builder.Services.AddControllers();
 
 builder.Services.AddDbContext<StoreContext>(opt =>
 {
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+    opt
+        .UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+        .EnableSensitiveDataLogging();
 });
 
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
