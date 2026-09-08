@@ -5,15 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "C#: api Debug",
-            "type": "dotnet",
+            "name": "Launch Chrome",
             "request": "launch",
-            "projectPath": "${workspaceFolder}/api.csproj"
-        },
-        {
-            "name": ".NET Core Attach",
-            "type": "coreclr",
-            "request": "attach"
+            "type": "chrome",
+            "url": "https://localhost:4200",
+            "webRoot": "${workspaceFolder}/client"
         }
     ]
 }
