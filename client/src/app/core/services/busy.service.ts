@@ -1,7 +1,7 @@
 import { Service, signal } from '@angular/core';
 
 @Service()
-export class Busy {
+export class BusyService {
     loading = signal(false);
     busyRequestCount = 0;
 

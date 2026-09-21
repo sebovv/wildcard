@@ -28,7 +28,7 @@ public class BuggyController : BaseApiController
     [HttpGet("internalerror")]
     public IActionResult GetInternalError()
     {
-        throw new Exception("This is a internal error");
+        throw new Exception("This is an internal error (500)");
     }
 
     [HttpPost("validationerror")]

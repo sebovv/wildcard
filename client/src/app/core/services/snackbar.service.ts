@@ -2,7 +2,7 @@ import { inject, Service } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Service()
-export class Snackbar {
+export class SnackbarService {
     private snackbar = inject(MatSnackBar);
 
     error(message: string) {
@@ -18,6 +18,5 @@ export class Snackbar {
             panelClass: ['snack-success']
         });
     }
-
 }
 
