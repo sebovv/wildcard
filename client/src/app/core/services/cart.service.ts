@@ -9,7 +9,7 @@ import { map } from 'rxjs';
 export class CartService {
     private http = inject(HttpClient);
 
-    baseUrl = environment.apiUrl;
+    private baseUrl = environment.apiUrl;
     cart = signal<Cart | null>(null);
     itemCount = computed(() => {
         return this.cart()?.items.reduce((sum, item) =>
